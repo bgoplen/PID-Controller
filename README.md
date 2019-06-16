@@ -1,6 +1,29 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 
+Reflection
+1) Describe the effects of the P, I, and D components of the PID algorithm on my implementation.
+Proportional (P)
+This component is proportional to the error.  In this case, the error is the cross track error (cte) which is how far from the center of the road.  If P is set too low, the steering is not responsive enough when the road curves.  If it is set too high, you get a lot of oscillations from overshooting.
+
+Integral (I)
+This component sums up or integrates the error which controls the drift in steering.  If set too low, the car will slowly drift to one side.  If set too high, the car's steering will quickly oscillate.
+
+Differential (D)
+This component finds the rate of change or derivative of the error to anticipate changes in the steering.  It reduces ringing after turns and dampens the response.  If set too low, there will be oscillations after turns due to overshooting.
+
+2) Discuss how the final hyperparameters (P, I, D coefficients) were obtained.
+
+Tuning of the initial PID coefficients was done manually.  First, P was adjusted to get the proper baseline turning response with I and D set to zero.  Second, D was adjusted to reduce the oscillations.  Finally, the I component was adjusted to reduce the drift.
+
+
+
+
+
+
+
+
+
 ---
 
 ## Dependencies

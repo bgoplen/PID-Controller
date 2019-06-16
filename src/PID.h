@@ -3,7 +3,8 @@
 
 class PID {
  public:
-  /**
+  
+    /**
    * Constructor
    */
   PID();
@@ -12,7 +13,7 @@ class PID {
    * Destructor.
    */
   virtual ~PID();
-
+  
   /**
    * Initialize PID.
    * @param (Kp_, Ki_, Kd_) The initial PID coefficients
@@ -33,14 +34,14 @@ class PID {
 
  private:
   /**
-   * PID Errors
+   * Errors
    */
   double p_error;
   double i_error;
   double d_error;
 
   /**
-   * PID Coefficients
+   * Coefficients
    */ 
   double Kp;
   double Ki;
